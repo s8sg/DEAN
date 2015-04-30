@@ -1,9 +1,10 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Controller
-Bundle-SymbolicName: com.dean.controller
+Bundle-SymbolicName: DeanCoreServiceRouter
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: com.dean.controller.core.Activator
 Bundle-Vendor: DEAN
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Import-Package: org.osgi.framework;version="1.3.0"
+Export-Package: com.dean.controller.commonService;version="0.1.0",com.dean.controller.core;version="0.1.0"

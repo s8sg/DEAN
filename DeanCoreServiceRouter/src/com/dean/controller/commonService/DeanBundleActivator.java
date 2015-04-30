@@ -1,4 +1,4 @@
-package com.dean.controller.common;
+package com.dean.controller.commonService;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;

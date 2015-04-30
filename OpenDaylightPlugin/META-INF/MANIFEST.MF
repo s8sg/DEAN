@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: OpenDaylight13Plugin
+Bundle-SymbolicName: OpenDaylightPlugin
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: core.dean.controller.plugin.odl.core.Activator
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Export-Package: core.dean.controller.plugin.odl.core 
+Import-Package: com.dean.controller.commonService;version="0.1.0",
+ com.dean.controller.feature.topologyManagerService; version="0.1.0",
+ org.osgi.framework;version="1.3.0",
+ org.osgi.util.tracker;version="1.5.1"

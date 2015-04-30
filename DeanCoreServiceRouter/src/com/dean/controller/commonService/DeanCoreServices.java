@@ -1,10 +1,9 @@
-package com.dean.controller.common;
+package com.dean.controller.commonService;
 
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 
 /* To expose the functionality of the Dean Core */
-public interface DeanCore {
+public interface DeanCoreServices {
 	public boolean register(DeanComponent controller);
 	public ArrayList<DeanControllerPlugin> getControllers();
 }
