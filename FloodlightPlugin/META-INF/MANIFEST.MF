@@ -1,13 +1,11 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: OpenDaylight13Plugin
-Bundle-SymbolicName: OpenDaylightPlugin
+Bundle-Name: FloodlightPlugin
+Bundle-SymbolicName: FloodlightPlugin
 Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: odl_helium.core.dean.controller.plugin.core.Activator
+Bundle-Activator: floodlightplugin.core.dean.controller.plugin.core.Activator
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
-Export-Package: odl_helium.core.dean.controller.plugin.core
 Import-Package: com.dean.controller.commonService;version="0.1.0",
- org.eclipse.equinox.log;version="1.0.0",
  org.osgi.framework;version="1.3.0",
  org.osgi.util.tracker;version="1.5.1",
  topologyManager.com.dean.controller.feature.topologyManagerService;version="0.1.0"

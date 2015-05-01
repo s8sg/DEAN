@@ -1,22 +1,26 @@
-package core.dean.controller.plugin.odl.internal;
+package odl_helium.core.dean.controller.plugin.internal;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import topologyManager.com.dean.controller.feature.topologyManagerService.Graph;
 
 import com.dean.controller.commonService.DeanComponent;
 import com.dean.controller.commonService.DeanControllerPlugin;
-import com.dean.controller.feature.topologyManagerService.Graph;
 
 public class OpenDaylightPlugin implements DeanControllerPlugin{
 	
 	String openDaylightPluginId = "ODLHELIUM"; 
+	private static Logger logger = Logger.getLogger(OpenDaylightPlugin.class.getName());
 	
 	public Graph getGraph(){
 		Graph graph = new Graph();
-		System.out.println("Getting Graph from ODL controller");
+		logger.log(Level.INFO, "Getting Graph from ODL controller");
 		return graph;
 	}
 
 	@Override
 	public Class<DeanComponent> provideClass() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 

@@ -1,15 +1,19 @@
-package core.dean.controller.plugin.odl.core;
+package topologyManager.com.dean.controller.feature.core;
+
+import java.util.Hashtable;
 
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.BundleException;
+import org.osgi.framework.ServiceReference;
 import org.osgi.util.tracker.ServiceTracker;
+
+import topologyManager.com.dean.controller.feature.internal.TopologyManager;
+import topologyManager.com.dean.controller.feature.topologyManagerService.TopologyMangerServices;
 
 import com.dean.controller.commonService.DeanBundleActivator;
 import com.dean.controller.commonService.DeanCoreServices;
 
-import core.dean.controller.plugin.odl.internal.OpenDaylightPlugin;
-
-public class Activator extends DeanBundleActivator {
+public class Activator extends DeanBundleActivator{
 
 	private static BundleContext context;
 	private ServiceTracker deanCoreTracker;
@@ -21,12 +25,12 @@ public class Activator extends DeanBundleActivator {
 	@Override
 	public void stopBundle(BundleContext context) {
 		// TODO Auto-generated method stub
-		System.out.println("Dean Opendaylight Plugin is getting Stopped !");
+		System.out.println("Dean Feature Topology Manager is getting Stopped !");
 	}
 
 	@Override
 	public void startBundle(BundleContext context) {
-		System.out.println("Dean Opendaylight Plugin is getting Started !");	
+		System.out.println("Dean Feature Topology Manager is getting Started !");
 		DeanCoreServices deanCore = null; 
 		
 		deanCoreTracker = new ServiceTracker(context, DeanCoreServices.class.getName(), null);
@@ -37,14 +41,15 @@ public class Activator extends DeanBundleActivator {
 			try {
 				context.getBundle().stop();
 			} catch (BundleException e) {
+				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}			
 		}
 		else {
-			/* Initialize the plugin Core */
-			OpenDaylightPlugin odlPlugin = new OpenDaylightPlugin(); 
-			/* Register the plugin to the Dean Core */
-			deanCore.register(odlPlugin);
+			/* Initialize the Feature Core */
+			TopologyManager topologyManager = new TopologyManager(deanCore);
+			/* Register the feature to the Dean Core */
+			deanCore.register(topologyManager);
 		}
 	}
 

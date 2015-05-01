@@ -1,17 +1,18 @@
-package com.dean.controller.feature.topologyManager.internal;
+package topologyManager.com.dean.controller.feature.internal;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 
+import topologyManager.com.dean.controller.feature.topologyManagerService.Graph;
+import topologyManager.com.dean.controller.feature.topologyManagerService.Port;
+import topologyManager.com.dean.controller.feature.topologyManagerService.Switch;
+import topologyManager.com.dean.controller.feature.topologyManagerService.TopologyMangerServices;
+
 import com.dean.controller.commonService.DeanComponent;
 import com.dean.controller.commonService.DeanControllerPlugin;
 import com.dean.controller.commonService.DeanCoreServices;
 import com.dean.controller.commonService.DeanFeature;
-import com.dean.controller.feature.topologyManagerService.Graph;
-import com.dean.controller.feature.topologyManagerService.Port;
-import com.dean.controller.feature.topologyManagerService.Switch;
-import com.dean.controller.feature.topologyManagerService.TopologyMangerServices;
 
 enum TopologyMethods {
     GETGRAPH ("getGraph"),
